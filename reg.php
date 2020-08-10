@@ -22,6 +22,11 @@
 					<td><input type="password" name="password"></td>
 				</tr>
 				<tr>
+					<td>UserType</td>
+					<td><input type="radio" name="usertype">admin 
+						<input type="radio" name="usertype">user</td>
+				</tr>
+				<tr>
 					<td></td>
 					<td><input type="submit" name="submit" value="Submit"></td>
 				</tr>

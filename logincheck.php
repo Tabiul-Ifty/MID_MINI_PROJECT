@@ -22,6 +22,21 @@
 			}else{
 				header('location: login.php?msg=invalid_username/password');
 			}
+		}
+		else{
+			
+			$con = mysqli_connect('localhost', 'root', '', 'MID_MINI_PROJECT');
+			$sql = "select * from admin where username='".$uname."' and password='".$password."'";
+			
+			$result = mysqli_query($con, $sql);
+			$row = mysqli_fetch_assoc($result);
+
+			if(count($row) > 0){
+				$_SESSION['status'] = "OK";
+				header('location: home.php');
+			}else{
+				header('location: login.php?msg=invalid_username/password');
+			}
 		}	
 
 	}else{
